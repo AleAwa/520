@@ -91,10 +91,16 @@
           flex: auto;
         }
       }
-  
+  /* 初始状态下隐藏导航栏 */
+.ceBian {
+  display: none;
+}
+
     </style>
   </head>
   <body class="flex">
+    <button id="showNavButton">显示导航栏</button>
+
     <!-- 侧边栏 -->
     <div
       style="width: 200px; z-index: 3"
@@ -157,6 +163,24 @@
         </div>
       </div>
     </div>
+     <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // 获取按钮元素
+  var showNavButton = document.getElementById("showNavButton");
+  // 获取导航栏元素
+  var navBar = document.querySelector(".ceBian");
+
+  // 添加点击事件监听器
+  showNavButton.addEventListener("click", function () {
+    // 切换导航栏的显示状态
+    if (navBar.style.display === "none" || navBar.style.display === "") {
+      navBar.style.display = "block"; // 显示导航栏
+    } else {
+      navBar.style.display = "none"; // 隐藏导航栏
+    }
+  });
+});
+    </script>
   </body>
 </html>
  
