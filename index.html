@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>甜蜜小屋</title>
@@ -76,15 +77,8 @@
 
       /* 当屏幕宽度小于600px时要改变的css */
       @media (max-width: 600px) {
-        /* 小屏幕上取消侧边栏，后面学js时会教怎么弹出 */
-        .ceBian {
-          display: none;
-        }
-        /* 内容栏和数据栏flex方向改为竖向 */
-        .neiRong {
-          flex-direction: column;
-        }
-        .shuJuQu {
+        /* 小屏幕上取消内容栏和右区的flex方向改为竖向 */
+        .neiRong, .youQu {
           flex-direction: column;
         }
         /* 右区加左外边距 */
@@ -97,6 +91,7 @@
           flex: auto;
         }
       }
+  
     </style>
   </head>
   <body class="flex">
@@ -122,6 +117,7 @@
         <div class="daoHang"><a target="_blank" rel="noopener noreferrer" href="https://ale823.wang/letter/">520信件</a></div>
           <div class="daoHang"><a target="_blank" rel="noopener noreferrer" href="https://ale823.wang/Love-Page/">留言板</a></div>
          <div class="daoHang"><a target="_blank" rel="noopener noreferrer" href="https://ale823.wang/love.timer/">热恋计时</a></div>
+         <div class="daoHang"><a target="_blank" rel="noopener noreferrer" href="https://ale823.wang/test/">试试新功能</a></div>
          <div class="daoHang">未完待续</div>
   
       </div>
