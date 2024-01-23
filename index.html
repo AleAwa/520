@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>甜蜜小屋</title>
     <link rel="icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
@@ -169,16 +168,13 @@
   var showNavButton = document.getElementById("showNavButton");
   // 获取导航栏元素
   var navBar = document.querySelector(".ceBian");
-
-  // 添加点击事件监听器
-  showNavButton.addEventListener("click", function () {
-    // 切换导航栏的显示状态
-    if (navBar.style.display === "none" || navBar.style.display === "") {
-      navBar.style.display = "block"; // 显示导航栏
-    } else {
-      navBar.style.display = "none"; // 隐藏导航栏
-    }
-      });
+showNavButton.addEventListener("click", function () {
+  // 切换导航栏的显示状态
+  if (navBar.style.display === "block") {
+    navBar.style.display = "none"; // 隐藏导航栏
+  } else {
+    navBar.style.display = "block"; // 显示导航栏
+  }
 });
     </script>
   </body>
