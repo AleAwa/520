@@ -163,20 +163,31 @@
       </div>
     </div>
      <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  // 获取按钮元素
-  var showNavButton = document.getElementById("showNavButton");
-  // 获取导航栏元素
+
+// 假设你有一个按钮元素
+const button = document.getElementById('showNavButton');
+
+// 用于切换导航栏显示的函数
+function toggleNavBar() {
   var navBar = document.querySelector(".ceBian");
-showNavButton.addEventListener("click", function () {
-  // 切换导航栏的显示状态
   if (navBar.style.display === "block") {
     navBar.style.display = "none"; // 隐藏导航栏
   } else {
     navBar.style.display = "block"; // 显示导航栏
   }
+}
+
+// 鼠标点击事件
+button.addEventListener('click', function(event) {
+    toggleNavBar();
 });
-    </script>
+
+// 触摸事件
+button.addEventListener('touchstart', function(event) {
+    event.preventDefault(); // 防止同时触发鼠标事件
+    toggleNavBar();
+});
+   </script>
   </body>
 </html>
  
